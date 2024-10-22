@@ -5,6 +5,8 @@ ruby "3.0.4"
 
 gem 'active_model_serializers'
 
+gem 'carrierwave'
+
 gem 'devise'
 
 gem 'kaminari'

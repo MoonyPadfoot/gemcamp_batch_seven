@@ -1,14 +1,16 @@
 <h1>Post List</h1>
+<%= link_to 'Export', posts_path(format: :csv, page: params[:page]) %>
 
-<table>
+<table class="table table-dark table-striped">
 
   <thead>
 
   <td>title</td>
   <td>content</td>
-  <td>category</td>
   <td>user</td>
+  <td>category</td>
   <td>comments count</td>
+  <td>image</td>
   <td>action</td>
 
   </thead>
@@ -23,9 +25,11 @@
 
       <td><%= post.user&.email %></td>
 
+      <td><%= post.categories.pluck(:name).join(',') %></td>
+
       <td><%= post.comments_count %></td>
 
-      <td><%= post.categories.pluck(:name).join(',') %></td>
+      <td><%= image_tag post.image.url if post.image.present? %></td>
 
       <td>
         <%= link_to 'Show', post_path(post) %>
