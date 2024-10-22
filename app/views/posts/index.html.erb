@@ -1,12 +1,12 @@
-<h1>Post List</h1>
+<h1><%= t('post_list') %></h1>
 <%= link_to 'Export', posts_path(format: :csv, page: params[:page]) %>
 
 <table class="table table-dark table-striped">
 
   <thead>
 
-  <td>title</td>
-  <td>content</td>
+  <td><%= Post.human_attribute_name(:title) %></td>
+  <td><%= Post.human_attribute_name(:content) %></td>
   <td>user</td>
   <td>category</td>
   <td>comments count</td>

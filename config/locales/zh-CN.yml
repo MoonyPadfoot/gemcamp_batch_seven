@@ -1,0 +1,12 @@
+zh-CN:
+  hello: "您好, %{name}"
+  post_list: 活動清單
+  activerecord:
+    models:
+      post:
+        one: 文章
+        other: 多篇文章
+    attributes:
+      post:
+        title: 標題
+        content: 內容
