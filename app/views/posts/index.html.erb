@@ -7,6 +7,7 @@
 
   <td><%= Post.human_attribute_name(:title) %></td>
   <td><%= Post.human_attribute_name(:content) %></td>
+  <td>created at</td>
   <td>user</td>
   <td>category</td>
   <td>comments count</td>
@@ -22,6 +23,8 @@
       <td><%= post.title %></td>
 
       <td><%= post.content %></td>
+
+      <td><%= post.created_at.to_fs %></td>
 
       <td><%= post.user&.email %></td>
 

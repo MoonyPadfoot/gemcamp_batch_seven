@@ -1,6 +1,8 @@
 Rails.application.routes.draw do
   devise_for :users
-  root 'welcome#index'
+  root 'posts#index'
+
+  resource :user
 
   resources :posts do
     resources :comments, except: :show

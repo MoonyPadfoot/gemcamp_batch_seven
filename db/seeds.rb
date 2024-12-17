@@ -5,3 +5,7 @@
 #
 #   movies = Movie.create([{ name: "Star Wars" }, { name: "Lord of the Rings" }])
 #   Character.create(name: "Luke", movie: movies.first)
+%w[Activity Event Topic News Sport].each do |name|
+  genre = Genre.create(name: name)
+  puts "create genre name: #{genre.name}"
+end

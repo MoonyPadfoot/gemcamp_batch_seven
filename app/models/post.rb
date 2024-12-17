@@ -8,6 +8,7 @@ class Post < ApplicationRecord
   has_many :post_category_ships
   has_many :categories, through: :post_category_ships
   belongs_to :user
+  belongs_to :genre
   mount_uploader :image, ImageUploader
 
   def destroy
